@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:minHeight="@dimen/_45sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.view.MTextView
+                    android:id="@+id/catetitleTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="Title"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:customTypeFace="@string/systemMediumFont" />
+
+                <com.view.MTextView
+
+                    android:id="@+id/catedescTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catetitleTxt"
+                    android:includeFontPadding="false"
+                    android:text="desc"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:customTypeFace="@string/systemLightFont" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.view.MTextView
+            android:id="@+id/seeAllTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:includeFontPadding="false"
+            android:text="See all"
+            android:textAllCaps="true"
+            android:textColor="@color/appThemeColor_1"
+            android:textSize="@dimen/_14ssp"
+
+
+            app:customTypeFace="@string/systemMediumFont" />
+
+        <ImageView
+            android:id="@+id/seeAllImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_see_all_arrow" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/child_category_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp" />
+
+</LinearLayout>

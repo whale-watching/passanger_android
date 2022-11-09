@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+
+        app:cardBackgroundColor="@color/appThemeColor_1"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardMaxElevation="@dimen/_5sdp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/mainDataArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/itemBulletinImg"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:gravity="center"
+                    app:srcCompat="@drawable/ic_dot" />
+            </LinearLayout>
+
+
+            <com.view.editBox.MaterialEditText
+                android:id="@+id/itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="start"
+                android:includeFontPadding="true"
+                android:maxLines="1"
+                android:minHeight="@dimen/_40sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/_14sdp"
+                app:met_hideUnderline="true" />
+
+
+            <LinearLayout
+
+                android:id="@+id/addRemoveItemQtyArea"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/appThemeColor_1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layoutShape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_shape"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/removeQtyArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/minusImgView"
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:tint="@color/appThemeColor_1"
+                            app:srcCompat="@drawable/ic_minus_cart" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.view.MTextView
+                            android:id="@+id/ItemQTY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:minEms="1"
+                            android:text="1"
+                            android:textColor="#141414"
+                            android:textSize="@dimen/_17sdp"
+                            app:customTypeFace="@string/systemMediumFont" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addItemQtyArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/addImgView"
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:tint="@color/appThemeColor_1"
+                            app:srcCompat="@drawable/ic_plus_cart" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/img_delete"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="@color/appThemeColor_1"
+                    android:minHeight="@dimen/_55sdp">
+
+                    <ImageView
+                        android:id="@+id/cancelImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:tint="#ffffff"
+                        app:srcCompat="@drawable/ic_clear" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/extraPayArea"
+
+            android:background="@drawable/material_card"
+            android:layout_marginTop="@dimen/_minus1sdp"
+
+android:layout_marginStart="@dimen/_minus2sdp"
+            android:layout_marginEnd="@dimen/_minus2sdp"
+            android:layout_marginBottom="@dimen/_minus2sdp"
+            android:padding="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.view.MTextView
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:id="@+id/ExtraPayTxt"
+                android:textAlignment="viewStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Title "
+                android:includeFontPadding="false"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_12"
+                android:gravity="center_vertical|start"
+                app:customTypeFace="@string/systemRegular" />
+                <com.view.MTextView
+                    android:includeFontPadding="false"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:id="@+id/ExtrasubPayTxt"
+                    android:textAlignment="viewStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Title "
+
+                    android:textColor="#777575"
+                    android:textSize="@dimen/txt_size_10"
+                    android:gravity="center_vertical|start"
+                    app:customTypeFace="@string/systemRegular" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/extrapay_chkBox"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center|start"
+                android:buttonTint="@color/appThemeColor_1"
+                android:gravity="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:visibility="visible" />
+
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
